@@ -102,7 +102,7 @@ function check_input($data) {
 
 <img src="img_girl.jpg" alt="Notebook" style="width:100%;">
 		<div class="content">
-    <h2 style="color:white;font-weight:900">Login Form</h2>
+    <h2 style="color:white;font-weight:900">Signin Form</h2>
 <p><span class="message">* required field.</span></p>
   Username: <input type="text" name="username" required>
   <span class="message">* <?php echo $ErrorUname;?></span>
