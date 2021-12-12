@@ -1,8 +1,8 @@
 <?php
 
 
-$databaseHost = '127.0.0.1';
-$databaseName = 'test_db_2';
+$databaseHost = 'test.chk7jf5ibvyy.us-east-1.rds.amazonaws.com';
+$databaseName = 'test';
 $databaseUsername = 'admin';
 $databasePassword = '12345678';
 
