@@ -1,0 +1,131 @@
+<html>
+<head>
+	<title>Add Booking</title>
+	<script>
+			
+	</script>
+	
+</head>
+
+<body style="background-color:rgb(115, 196, 196)">
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+		
+		body {
+		  font-family: Monaco;
+		  font-size: 17px;
+		}
+		
+		.container {
+		  position: relative;
+		  max-width: 800px;
+		  margin: 0 auto;
+		}
+		
+		.container img {vertical-align: middle;}
+		
+		.container .content {
+		  position: absolute;
+		  bottom: 0;
+		  background: rgb(0, 0, 0); /* Fallback color */
+		  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+		  color: #f1f1f1;
+		  width: 100%;
+		  padding: 20px;
+		}
+
+		.center {
+  			margin-left: auto;
+  			margin-right: auto;
+		}
+
+		.left
+		{
+			float: left;
+		}
+		.right
+		{
+			float: right;
+		}
+		.alignment
+		{
+			align-items: left;
+
+		}
+		</style>
+
+	
+	<br/><br/>
+	
+
+	<form action="add.php" method="post" name="form1">
+		
+	
+		<div class="container">
+			<a class="right" href="index.php" style="color:white;font-weight:900">Logout</a>
+		<img src="img_girl.jpg" alt="Notebook" style="width:100%;">
+		<div class="content">
+			<a href="main.php" style="color:white;font-weight:900" >Home</a>
+		<table class="center" width="100%" border="2">
+			<tbody style="background-color: white; box-shadow: 110px black;border: 1px solid white;padding: 10px;box-shadow: 5px 10px #888888;">
+			<tr class="left"> 
+				<td>Name</td>
+				<td><input type="text" name="name"size="90"></td>
+			</tr>
+			<tr class="left"> 
+				<td>No of people</td>
+				<td>
+				<input type="number" name="age" id="Numberofpeople" size="20">
+				<button type="button" name="Calculate" onclick="getInputValue();" onclick="rm();">Calculate</button>
+				<script type="text/javascript">
+					function getInputValue(){
+					var n1 = document.getElementById("Numberofpeople").value;
+					n1=parseInt(n1/2);
+					var price;
+					price = n1 * 500;
+					document.getElementById("sm").value = n1;
+					document.getElementById("fn").value = price;
+					
+					}
+				</script>
+				
+				</td>  
+			</tr>
+			<tr>
+				<td>Price Per room:500</td>
+				
+			</tr>
+			<tr>
+				<td>No of Rooms
+				<input id="sm" name="rooms">
+				</td>
+				
+			</tr>
+			<tr>
+				<td>Final Price
+				<input id="fn" name="price">
+				</td>  
+			</tr>
+			<tr class="left"> 
+				<td>Email</td>
+				<td><input type="text" name="email"size="90"></td>
+			</br>
+			</tr>
+		</table>
+	
+	<table class="center">
+			<tr> 
+				<td></td>
+				<td><input type="submit" name="Submit" value="Add" size="150"></td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+
+	</form>
+</body>
+</html>
+

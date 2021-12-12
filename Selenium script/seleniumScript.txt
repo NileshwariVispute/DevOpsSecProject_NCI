@@ -1,0 +1,64 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+
+public class SeleniumDemo {
+
+	public static void main(String[] args)throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver",
+				"D:\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		String baseUrl = "http://localhost/DevOpsSecProject_NCI/index.php";
+		driver.get(baseUrl);
+		driver.manage().window().maximize();
+		
+		// Login page-
+		
+		driver.findElement(By.name("username")).sendKeys("nileshwari");
+		Thread.sleep(2000);
+		driver.findElement(By.name("password")).sendKeys("nilu");
+		Thread.sleep(2000);
+		driver.findElement(By.name("login")).click();
+		Thread.sleep(2000);
+		
+		// Add New Customer-
+		driver.findElement(By.linkText("Add New Booking")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.name("name")).sendKeys("Jack Jonas");
+		Thread.sleep(2000);
+		driver.findElement(By.id("Numberofpeople")).sendKeys("5");
+		Thread.sleep(2000);
+		driver.findElement(By.name("Calculate")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.name("email")).sendKeys("jack@gmail.com");
+		Thread.sleep(2000);
+		driver.findElement(By.name("Submit")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.linkText("View Result")).click();
+		Thread.sleep(2000);
+		
+		// Edit Customer
+		driver.findElement(By.linkText("Edit")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("Numberofpeople")).clear();
+		driver.findElement(By.id("Numberofpeople")).sendKeys("6");
+		Thread.sleep(2000);
+		driver.findElement(By.name("Calculate")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.name("update")).click();
+		Thread.sleep(2000);
+		
+		// Delete Customer
+		driver.findElement(By.linkText("Delete")).click();
+		Thread.sleep(2000);
+		driver.switchTo().alert().accept();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.linkText("Logout")).click();
+		Thread.sleep(2000);
+		driver.close();
+		System.exit(0);
+	}
+
+}

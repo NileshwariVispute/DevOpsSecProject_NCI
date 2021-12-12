@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "Entered in prebuild phase";
+  build:
+    commands:
+      - echo "Entered in build phase"
+  post_build:
+    commands:
+      - echo "Enteredin post-build phase"
+artifacts:
+  files:
+    - add.html
+    - add.php	
+    - index.php
+    - delete.php
+    - edit.php
+    - main.php
+    - config.php
+  
